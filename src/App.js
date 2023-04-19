@@ -53,7 +53,7 @@ function App() {
 
               <ProfileCard title="Education" aboutText="University of Illinois: Bachelor of Science in Computer Engineering" />
 
-              <ProfileCard title="Work Experience" />
+              <ProfileCard title="Work Experience" aboutText="Karsun Solution LLC" />
 
             </List>
           </Paper>
