@@ -1,19 +1,16 @@
-import logo from "./logo.svg";
-import ProfileCard from "./components/ProfileCard";
 import "@mui/material";
-import { ThemeProvider, createTheme } from "@mui/material/styles";
-import CssBaseline from "@mui/material/CssBaseline";
-
-import "./App.css";
 import {
-  Card,
   Container,
   List,
-  Paper,
-  Typography,
-  colors,
+  Paper, Typography, Avatar
 } from "@mui/material";
-import Grid from "@mui/material/Grid";
+import CssBaseline from "@mui/material/CssBaseline";
+import { createTheme, ThemeProvider } from '@mui/material/styles';
+import * as React from 'react';
+import "./App.css";
+import ProfileCard from "./components/ProfileCard";
+import ProfilePic from "./images/profilepic.jpg"
+
 
 const themeDark = createTheme({
   palette: {
@@ -28,26 +25,47 @@ const themeDark = createTheme({
 });
 
 function App() {
+
+
   return (
     <ThemeProvider theme={themeDark}>
-      <Container maxWidth="xl">
+      <CssBaseline />
+      <Container maxWidth="100%">
         <div className="App">
-          <Card sx={{ maxWidth: 3600, minHeight: 275, background: "darkgrey" }}>
-            <Typography variant="h1" color={"black"}>
+          <Paper
+            sx={{ maxWidth: "100%", minHeight: 275, background: "darkgrey" }}
+            justifyContent={"center"}
+          >
+            <Avatar alt="display" src={ProfilePic} display ="flex" 
+            sx={{ width: 100, height: 100, justifyContent: "center", margin:"auto"}} />
+            <Typography variant="h2" color={"black"}>
               Ayaan Pupala
             </Typography>
-            <Grid>
-              <ProfileCard title="About" />
-       
-              <ProfileCard title="Education" />
-              
+
+            <List
+              style={{
+                maxHeight: "100%",
+                overflow: "auto",
+                justifyContent: "center",
+              }}
+            >
+              <ProfileCard title="About" aboutText="Fullstack Software Engineer" />
+
+              <ProfileCard title="Education" aboutText="University of Illinois: Bachelor of Science in Computer Engineering" />
+
               <ProfileCard title="Work Experience" />
-            </Grid>
-          </Card>
+
+            </List>
+          </Paper>
         </div>
+    
+
       </Container>
     </ThemeProvider>
   );
 }
 
 export default App;
+
+
+
