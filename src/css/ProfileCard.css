@@ -1,0 +1,18 @@
+.header {
+  display: "flex";
+  flex-direction:  "row";
+  align-items: "center"; 
+  padding-left: 2px; 
+  text-align: "center"; 
+  padding-top: 5px;
+  flex:1;
+
+}
+/* style={{display:"flex", flexDirection:"row", flex:1, alignItems:"center", paddingLeft:2 ,textAlign:"center", paddingTop:1}} */
+
+.ProfileItem {
+  max-width: 3600px;
+  min-height: 275px;
+  padding: 0px;
+  background-color: "aqua";
+}

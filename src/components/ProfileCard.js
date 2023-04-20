@@ -1,8 +1,10 @@
-import { Grid, Container, Divider, Paper, Typography } from "@mui/material";
+import { Grid, Container, Divider, Paper, Typography, Icon } from "@mui/material";
 import Card from "@mui/material/Card";
 import SectionContent from "./SectionContent";
+import "../css/ProfileCard.css";
 
 function ProfileCard(props) {
+  const icon = props.icon;
   var sections = props.sections.map(function (section) {
     return (
       <li>
@@ -17,23 +19,20 @@ function ProfileCard(props) {
     );
   });
   return (
-    <Container maxWidth="xl">
-      <Paper elevation={20} />
-      <Card sx={{ maxWidth: 3600, minHeight: 275, padding: 0 }}>
+    
+      <Card sx={{marginBottom:2}} >
+        <div className="ProfileCardHeader" style={{display:"flex", flexDirection:"row", flex:1, alignItems:"center", paddingLeft:2 ,textAlign:"center", paddingTop:3}}>{icon()}
         <Typography
           variant="h5"
           color="darkgrey"
-          textAlign="left"
-          paddingLeft={2}
-          paddingTop={1}
+          textAlign="left"         
         >
           {props.sectionTitle}{" "}
-        </Typography>
+        </Typography></div>
         <li>{sections}</li>
       </Card>
-      <h2></h2>
-      <Paper />
-    </Container>
+      
+   
   );
 }
 export default ProfileCard;
