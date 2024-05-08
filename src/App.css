@@ -43,3 +43,11 @@
     transform: rotate(360deg);
   }
 }
+.css-fix {
+  white-space: pre-wrap;
+}
+
+.img{
+  width: 10px;
+  height: 10px;
+}

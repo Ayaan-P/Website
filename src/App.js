@@ -5,6 +5,7 @@ import { createTheme, ThemeProvider } from "@mui/material/styles";
 import * as React from "react";
 import "./App.css";
 import ProfileCard from "./components/ProfileCard";
+
 import ProfilePic from "./images/profilepic.jpg";
 import PersonIcon from '@mui/icons-material/Person';
 import AutoStoriesIcon from '@mui/icons-material/AutoStories';
@@ -32,7 +33,7 @@ function App() {
       subtitle: "Bachelor of Science in Computer Engineering",
       aboutText: "",
       date: "August 2017 - December 2021 ",
-      img: "./images/uiuc.png",
+      imgSrc: "C:/Users/ayaan/Desktop/Website/Website/src/images/uiuc.png",
     },
     {
       id: 2,
@@ -40,34 +41,42 @@ function App() {
       subtitle: "ICSE, ISC Science",
       aboutText: "",
       date: "May 2017",
-      img: "./images/cathedral.jpg",
+      imgSrc: "C:/Users/ayaan/Desktop/Website/Website/src/images/cathedral.jpg",
     },
   ];
   const workSections = [
     {
       id: 1,
+      sectionTitle: "Epigeneres Biotech",
+      subtitle: "ML Engineer",
+      aboutText: "",
+      date: "October 2023 - Present",
+      imgSrc: "C:/Users/ayaan/Desktop/Website/Website/src/images/cathedral.jpg",
+    },
+    {
+      id: 2,
       sectionTitle: "Karsun Solutions LLC",
       subtitle: "Software Engineer",
       aboutText: "",
       date: "March 2021 - Present",
-      img: "./images/cathedral.jpg",
+      imgSrc: "",
     },
     {
-      id: 2,
+      id: 3,
       sectionTitle: "Network International LLC",
       subtitle: "Software Engineering Intern",
       aboutText: "",
       date: "May 2018 - July 2018",
-      img: "./images/cathedral.jpg",
+      imgSrc: "",
     },
   ];
   const aboutSections = [
     {
       id: 1,
-      sectionTitle: "Fullstack Engineer",
-      aboutText: "",
+      sectionTitle: "Incoming student in the Master of Science in Artificial Intelligence program at Northwestern University starting Fall 2024",
+      aboutText: '- Currently work on creating deep learning models to detect cancer in the early stages with Epigeneres Biotech \n - 3 years of Software Engineering Experience as a Fullstack Developer with Karsun Solutions LLC. Contracted with the Federal Aviation Administration and the General Services Administration',
       date: "",
-      img: "./images/cathedral.jpg",
+      imgSrc: "",
     },
   ];
   const projectSections = [
@@ -76,35 +85,35 @@ function App() {
       sectionTitle: "React Web Development",
       aboutText: "",
       date: "",
-      img: "./images/cathedral.jpg",
+      imgSrc: "",
     },
     {
       id: 2,
       sectionTitle: "React Native App Development",
       aboutText: "",
       date: "",
-      img: "./images/cathedral.jpg",
+      imgSrc: "",
     },
     {
       id: 3,
       sectionTitle: "Game Development",
       aboutText: "",
       date: "",
-      img: "./images/cathedral.jpg",
+      imgSrc: "",
     },
     {
       id: 4,
       sectionTitle: "Image Classification",
       aboutText: "",
       date: "",
-      img: "./images/cathedral.jpg",
+      imgSrc: "",
     },
     {
       id: 5,
       sectionTitle: "Android App Development",
       aboutText: "",
       date: "",
-      img: "./images/cathedral.jpg",
+      imgSrc: "",
     },
   ];
 
@@ -180,26 +189,7 @@ function App() {
                   sectionTitle="Projects"
                   sections={projectSections}
                 />
-                <ProfileCard
-                icon={() => <SourceIcon  className="Card-icon" />}
-                  sectionTitle="Projects"
-                  sections={projectSections}
-                />
-                <ProfileCard
-                icon={() => <SourceIcon  className="Card-icon" />}
-                  sectionTitle="Projects"
-                  sections={projectSections}
-                />
-                <ProfileCard
-                icon={() => <SourceIcon  className="Card-icon" />}
-                  sectionTitle="Projects"
-                  sections={projectSections}
-                />
-                <ProfileCard
-                icon={() => <SourceIcon  className="Card-icon" />}
-                  sectionTitle="Projects"
-                  sections={projectSections}
-                />
+                
               </List>
             </Paper>
           </Paper>
