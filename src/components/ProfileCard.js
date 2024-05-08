@@ -14,6 +14,7 @@ function ProfileCard(props) {
           aboutText={section.aboutText}
           date={section.date}
           img={section.img} 
+          about={section.about}
         />
       </li>
     );

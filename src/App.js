@@ -34,6 +34,7 @@ function App() {
       aboutText: "",
       date: "August 2017 - December 2021 ",
       imgSrc: "C:/Users/ayaan/Desktop/Website/Website/src/images/uiuc.png",
+      
     },
     {
       id: 2,
@@ -77,6 +78,7 @@ function App() {
       aboutText: '- Currently work on creating deep learning models to detect cancer in the early stages with Epigeneres Biotech \n - 3 years of Software Engineering Experience as a Fullstack Developer with Karsun Solutions LLC. Contracted with the Federal Aviation Administration and the General Services Administration',
       date: "",
       imgSrc: "",
+      about: "true",
     },
   ];
   const projectSections = [
@@ -121,13 +123,14 @@ function App() {
     <ThemeProvider theme={themeDark}>
       <CssBaseline />
       <Container maxWidth="100%">
-        <div className="App">
+        <div className="App" >
           <Paper
             sx={{
               maxWidth: "100%",
               minHeight: 275,
               background: "darkgrey",
               padding: 5,
+            
             }}
             justifyContent={"center"}
           >

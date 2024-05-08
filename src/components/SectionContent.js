@@ -11,21 +11,20 @@ import Card from "@mui/material/Card";
 import { useState } from "react";
 // import ProfilePic from "..images/uiuc.png"
 
-function SectionContent({ sectionTitle, subtitle, aboutText, date, imgSrc }) {
+function SectionContent({ sectionTitle, subtitle, aboutText, date, imgSrc, about=false }) {
   // const imageSrc = ;
   return (
     
 
     <Stack direction= "row">
-      <Stack direction="column" sx={{flex:0.05}}>
+      <Stack direction="column" width={50} minWidth={50}>
       <img src={require("C:/Users/ayaan/Desktop/Website/Website/src/images/cathedral.jpg" )} style={{ width: 50, height: 50, padding:5 }}/>
       </Stack>
-      <Stack direction="column" sx={{flex:0.70}}>
+      <Stack direction="column"  width = {"75%"} minWidth={"60%"}>
         <Typography
           fontSize={16}
           textAlign="left"
-          paddingLeft={2}
-          // justifyContent="flex-start"
+          paddingLeft={0}
         >
           {sectionTitle}
         </Typography>
@@ -34,7 +33,7 @@ function SectionContent({ sectionTitle, subtitle, aboutText, date, imgSrc }) {
           variant="caption"
           // justifyContent="flex-start"
           textAlign="left"
-          paddingLeft={2}
+          paddingLeft={0}
         >
           {subtitle}
         </Typography>
@@ -43,22 +42,23 @@ function SectionContent({ sectionTitle, subtitle, aboutText, date, imgSrc }) {
           variant="body1"
           // justifyContent="flex-start"
           textAlign="left"
-          paddingLeft={2}
+          paddingLeft={0}
         >
           {aboutText}
         </Typography>
       </Stack>
 
-      <Stack direction="columun"  sx={{flex:0.25, textAlign:"end", justifyContent:"flex-end"}}>
+      <Stack direction="column" alignItems={"flex-end"} minWidth={"15%"}  >
         <Typography
           variant="subtitle2"
-          textAlign="right"
+          textAlign="end"
           paddingRight={2}
-          justifyContent="flex-end"
+          // justifyContent="flex-end"
         >
           {date}
         </Typography>
       </Stack>
+      
     </Stack>
   );
 }

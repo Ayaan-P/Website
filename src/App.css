@@ -43,10 +43,12 @@
     transform: rotate(360deg);
   }
 }
-.css-fix {
+/* .css-fix {
   white-space: pre-wrap;
+} */
+.container:empty {
+  display: none;
 }
-
 .img{
   width: 10px;
   height: 10px;
