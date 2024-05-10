@@ -43,9 +43,9 @@
     transform: rotate(360deg);
   }
 }
-/* .css-fix {
-  white-space: pre-wrap;
-} */
+.SectionContent {
+  white-space: pre-line;
+}
 .container:empty {
   display: none;
 }

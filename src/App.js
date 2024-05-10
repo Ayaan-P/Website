@@ -29,15 +29,24 @@ function App() {
   const educationSections = [
     {
       id: 1,
-      sectionTitle: "University of Illinois at Urbana-Champaign",
-      subtitle: "Bachelor of Science in Computer Engineering",
+      sectionTitle: "Northwestern University",
+      subtitle: "Master of Science in Artificial Intelligence",
       aboutText: "",
-      date: "August 2017 - December 2021 ",
+      date: "September 2024 - December 2025",
       imgSrc: "C:/Users/ayaan/Desktop/Website/Website/src/images/uiuc.png",
       
     },
     {
       id: 2,
+      sectionTitle: "University of Illinois at Urbana-Champaign",
+      subtitle: "Bachelor of Science in Computer Engineering",
+      aboutText: "",
+      date: "August 2017 - December 2021",
+      imgSrc: "C:/Users/ayaan/Desktop/Website/Website/src/images/uiuc.png",
+      
+    },
+    {
+      id: 3,
       sectionTitle: "Cathedral and John Connan School",
       subtitle: "ICSE, ISC Science",
       aboutText: "",
@@ -75,7 +84,7 @@ function App() {
     {
       id: 1,
       sectionTitle: "Incoming student in the Master of Science in Artificial Intelligence program at Northwestern University starting Fall 2024",
-      aboutText: '- Currently work on creating deep learning models to detect cancer in the early stages with Epigeneres Biotech \n - 3 years of Software Engineering Experience as a Fullstack Developer with Karsun Solutions LLC. Contracted with the Federal Aviation Administration and the General Services Administration',
+      aboutText: '- Currently work on creating deep learning models to detect cancer in the early stages with Epigeneres Biotech \n- 3 years of Software Engineering Experience as a Fullstack Developer with Karsun Solutions LLC\n- Contracted with the Federal Aviation Administration and General Services Administration',
       date: "",
       imgSrc: "",
       about: "true",
@@ -173,6 +182,7 @@ function App() {
                   icon={() => <PersonIcon className="Card-icon" />}
                   sectionTitle="About"
                   sections={aboutSections}
+                  about={true}
                 />
 
                 <ProfileCard
