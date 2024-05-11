@@ -15,6 +15,7 @@ export default function ChipsArray() {
     { key: 1, label: 'LinkedIn', url:"https://www.linkedin.com/in/ayaanpupala/" },
     { key: 2, label: 'Email', url:"mailto:pupalaayaan@gmail.com" },
     { key: 3, label: 'Instagram', url:"https://www.instagram.com/ayaanpupala/" },
+    { key: 4, label: 'Resume', url:"https://drive.google.com/uc?export=download&id=18iue81q-qlm_I7zk0_r4at_bIwPyZt_a" },
     // { key: 4, label: 'Vue.js' },
   ]);
 
@@ -26,7 +27,8 @@ export default function ChipsArray() {
   };
 
   return (
-    <Card
+    <Paper
+      elevation={0}
       sx={{
         display: 'flex',
         justifyContent: 'center',
@@ -38,6 +40,7 @@ export default function ChipsArray() {
         overflow: "auto",
         margin: "auto",
         padding:1,
+        backgroundColor:'transparent'
       }}
       component="ul"
     >
@@ -53,11 +56,14 @@ export default function ChipsArray() {
             <Chip
               icon={icon}
               label={data.label}
+              // variant='outlined'
+              // color='error'
+              style={{backgroundColor:'#222222'}}
               onClick={data.label === 'React' ? undefined : handleClick(data)}
             />
           </ListItem>
         );
       })}
-    </Card>
+    </Paper>
   );
 }

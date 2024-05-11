@@ -1,3 +1,4 @@
+ 
 import "@mui/material";
 import { Container, List, Paper, Typography, Avatar } from "@mui/material";
 import CssBaseline from "@mui/material/CssBaseline";
@@ -5,8 +6,16 @@ import { createTheme, ThemeProvider } from "@mui/material/styles";
 import * as React from "react";
 import "./App.css";
 import ProfileCard from "./components/ProfileCard";
-
+ 
 import ProfilePic from "./images/profilepic.jpg";
+import NorthwesternImg from './images/Northwestern.png'
+import CathedralImg from './images/cathedral.jpg'
+import UIUCImg from './images/uiuc.jpg'
+import EpigeneresImg from './images/epigen.jpeg'
+import NetworkImg from './images/network.jpeg'
+import KarsunImg from './images/karsun.jpeg'
+import GitImg from './images/google.png'
+ 
 import PersonIcon from '@mui/icons-material/Person';
 import AutoStoriesIcon from '@mui/icons-material/AutoStories';
 import WorkIcon from '@mui/icons-material/Work';
@@ -25,7 +34,7 @@ const themeDark = createTheme({
     mode: "dark",
   },
 });
-
+ 
 function App() {
   const educationSections = [
     {
@@ -34,7 +43,7 @@ function App() {
       subtitle: "Master of Science in Artificial Intelligence",
       aboutText: "",
       date: "September 2024 - December 2025",
-      imgSrc: "..images/Northwestern.png",
+      imgSrc: NorthwesternImg,
       
     },
     {
@@ -43,16 +52,16 @@ function App() {
       subtitle: "Bachelor of Science in Computer Engineering",
       aboutText: "",
       date: "August 2017 - December 2021",
-      imgSrc: "C:/Users/ayaan/Desktop/Website/Website/src/images/uiuc.jpg",
+      imgSrc: UIUCImg,
       
     },
     {
       id: 3,
-      sectionTitle: "Cathedral and John Connan School",
+      sectionTitle: "Cathedral and John Connon School",
       subtitle: "ICSE, ISC Science",
       aboutText: "",
       date: "May 2017",
-      imgSrc: "C:/Users/ayaan/Desktop/Website/Website/src/images/cathedral.jpg",
+      imgSrc: CathedralImg,
     },
   ];
   const workSections = [
@@ -62,7 +71,7 @@ function App() {
       subtitle: "ML Engineer",
       aboutText: "",
       date: "October 2023 - Present",
-      imgSrc: "C:/Users/ayaan/Desktop/Website/Website/src/images/cathedral.jpg",
+      imgSrc: EpigeneresImg,
     },
     {
       id: 2,
@@ -70,7 +79,7 @@ function App() {
       subtitle: "Software Engineer",
       aboutText: "",
       date: "March 2021 - Present",
-      imgSrc: "",
+      imgSrc: KarsunImg,
     },
     {
       id: 3,
@@ -78,13 +87,13 @@ function App() {
       subtitle: "Software Engineering Intern",
       aboutText: "",
       date: "May 2018 - July 2018",
-      imgSrc: "",
+      imgSrc: NetworkImg,
     },
   ];
   const aboutSections = [
     {
       id: 1,
-      sectionTitle: "Incoming student in the Master of Science in Artificial Intelligence program at Northwestern University starting Fall 2024",
+      sectionTitle: "Incoming Master of Science in Artificial Intelligence student at Northwestern University starting Fall 2024",
       aboutText: '- Currently work on creating deep learning models to detect cancer in the early stages with Epigeneres Biotech \n- 3 years of Software Engineering Experience as a Fullstack Developer with Karsun Solutions LLC\n- Contracted with the Federal Aviation Administration and General Services Administration',
       date: "",
       imgSrc: "",
@@ -97,7 +106,7 @@ function App() {
       sectionTitle: "React Web Development",
       aboutText: "",
       date: "",
-      imgSrc: "",
+      imgSrc:  "",
     },
     {
       id: 2,
@@ -128,7 +137,7 @@ function App() {
       imgSrc: "",
     },
   ];
-
+ 
   return (
     <ThemeProvider theme={themeDark}>
       <CssBaseline />
@@ -155,14 +164,14 @@ function App() {
                 margin: "auto",
               }}
             />
-
+ 
             <Typography variant="h2" color={"black"}>
               Ayaan Pupala
             </Typography>
-            <br></br>
+
             <ChipsArray>
             </ChipsArray> 
-            <br></br>
+
             <Paper
               elevation={0}
               style={{
@@ -188,19 +197,19 @@ function App() {
                   sections={aboutSections}
                   about={true}
                 />
-
+ 
                 <ProfileCard
                 icon={() => <AutoStoriesIcon className="Card-icon"  />}
                   sectionTitle="Education"
                   sections={educationSections}
                 />
-
+ 
                 <ProfileCard
                 icon={() => <WorkIcon className="Card-icon"  />}
                   sectionTitle="Work Experience"
                   sections={workSections}
                 />
-
+ 
                 <ProfileCard
                 icon={() => <SourceIcon  className="Card-icon" />}
                   sectionTitle="Projects"
@@ -215,5 +224,6 @@ function App() {
     </ThemeProvider>
   );
 }
-
+ 
 export default App;
+ 

@@ -13,7 +13,7 @@ function ProfileCard(props) {
           subtitle={section.subtitle}
           aboutText={section.aboutText}
           date={section.date}
-          img={section.img} 
+          imgSrc={section.imgSrc} 
           about={section.about}
         />
       </li>
@@ -26,7 +26,8 @@ function ProfileCard(props) {
         <Typography
           variant="h5"
           color="darkgrey"
-          textAlign="left"         
+          textAlign="left"  
+          paddingLeft={1.5}       
         >
           {props.sectionTitle}{" "}
         </Typography></div>
