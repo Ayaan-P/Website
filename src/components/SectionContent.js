@@ -9,7 +9,8 @@ import {
 } from "@mui/material";
 import Card from "@mui/material/Card";
 import { useState } from "react";
-// import ProfilePic from "..images/uiuc.png"
+
+
 
 function SectionContent({ sectionTitle, subtitle, aboutText, date, imgSrc, about }) {
   // const imageSrc = ;
@@ -19,7 +20,7 @@ function SectionContent({ sectionTitle, subtitle, aboutText, date, imgSrc, about
 
     <Stack direction= "row">
       <Stack direction="column" width={50} minWidth={50}>
-      <img src={require("C:/Users/ayaan/Desktop/Website/Website/src/images/cathedral.jpg" )} style={{ width: 50, height: 50, padding:5 }}/>
+      <img src={imgSrc} style={{ width: 50, height: 50, padding:5 }}/>
       </Stack>
       <Stack direction="column" flex={1} minWidth={"60%"} maxWidth={"90%"}>
         <Typography
@@ -77,16 +78,6 @@ function SectionContent({ sectionTitle, subtitle, aboutText, date, imgSrc, about
             {sectionTitle}
           </Typography>
           
-          {/* <pre>
-          <Typography
-            variant="caption"
-            // justifyContent="flex-start"
-            textAlign="left"
-            paddingLeft={0}
-          >
-            {aboutText}
-          </Typography>
-          </pre> */}
           <pre>
           <Typography
             variant="body1"

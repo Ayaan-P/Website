@@ -12,6 +12,7 @@ import AutoStoriesIcon from '@mui/icons-material/AutoStories';
 import WorkIcon from '@mui/icons-material/Work';
 import SourceIcon from '@mui/icons-material/Source';
 import { spacing } from "@mui/system";
+import ChipsArray from "./components/ChipArray";
 
 const themeDark = createTheme({
   palette: {
@@ -33,7 +34,7 @@ function App() {
       subtitle: "Master of Science in Artificial Intelligence",
       aboutText: "",
       date: "September 2024 - December 2025",
-      imgSrc: "C:/Users/ayaan/Desktop/Website/Website/src/images/uiuc.png",
+      imgSrc: "..images/Northwestern.png",
       
     },
     {
@@ -42,7 +43,7 @@ function App() {
       subtitle: "Bachelor of Science in Computer Engineering",
       aboutText: "",
       date: "August 2017 - December 2021",
-      imgSrc: "C:/Users/ayaan/Desktop/Website/Website/src/images/uiuc.png",
+      imgSrc: "C:/Users/ayaan/Desktop/Website/Website/src/images/uiuc.jpg",
       
     },
     {
@@ -158,7 +159,10 @@ function App() {
             <Typography variant="h2" color={"black"}>
               Ayaan Pupala
             </Typography>
-
+            <br></br>
+            <ChipsArray>
+            </ChipsArray> 
+            <br></br>
             <Paper
               elevation={0}
               style={{
